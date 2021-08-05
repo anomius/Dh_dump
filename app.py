@@ -34,7 +34,7 @@ export_as_pdf = st.button("Export PDF")
 with open('temp.html') as file_:
     template = ji.Template(file_.read())
 
-k=template.render(name=name,date=date_s,perc=percent,acc_no=ac,ifsc=ifsc,pay_date=payout_date,add=add_t,body=body_t)
+k=template.render(name=name,date=date_s,perc=percent,a_no=ac,ifsc=ifsc,pay_date=payout_date,add=add_t,body=body_t)
 st.markdown(k,unsafe_allow_html=True)
 
 if export_as_pdf:
