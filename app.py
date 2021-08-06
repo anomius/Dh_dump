@@ -46,6 +46,6 @@ if export_as_pdf:
             }
         ''')
     pdf = weasyprint.HTML(string=k).write_pdf(stylesheets=[css], presentational_hints=True)
-    html = create_download_link(pdf, "test")
+    html = create_download_link(pdf, name)
     st.markdown(html, unsafe_allow_html=True)
     #st.write(pdf)
